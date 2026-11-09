@@ -41,5 +41,14 @@
     rankFilters.forEach(item => item.classList.toggle('active', item === filter));
   }));
 
+  qa('img').forEach(image => {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'media-placeholder';
+    placeholder.setAttribute('role', 'img');
+    placeholder.setAttribute('aria-label', `${image.alt || 'Image'} placeholder`);
+    placeholder.innerHTML = '<span>IMAGE PLACEHOLDER</span><b>Visual asset coming soon</b>';
+    image.replaceWith(placeholder);
+  });
+
   q('#current-year').textContent = String(new Date().getFullYear());
 })();
