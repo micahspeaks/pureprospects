@@ -3,174 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07090e" />
-  <meta name="description" content="Pure Prospects — recruiting, scouting, rankings and the stories behind the next wave of talent." />
-  <meta property="og:title" content="Pure Prospects | The Next Wave Starts Here" />
-  <meta property="og:description" content="Recruiting. Scouting. Rankings. Exposure." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/pp-logo.webp" />
-  <title>Pure Prospects — The Next Wave Starts Here</title>
+  <meta name="theme-color" content="#111111" />
+  <meta name="description" content="Pure Prospects — basketball recruiting profiles, rankings, events, and coverage." />
+  <title>Pure Prospects | Basketball Recruiting</title>
   <link rel="icon" type="image/webp" href="assets/pp-logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announcement" aria-label="Announcement">
-    <div class="shell announcement__inner">
-      <div class="announcement__left"><span class="live-dot"></span><span>THE NEXT WAVE IS HERE</span><span class="announcement__divider">/</span><span class="hide-small">RECRUITING · SCOUTING · MEDIA</span></div>
-      <a href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer">FOLLOW THE COVERAGE <span aria-hidden="true">↗</span></a>
-    </div>
-  </div>
-
-  <header class="site-header" id="site-header">
-    <div class="shell header__inner">
-      <a class="brand" href="#top" aria-label="Pure Prospects home">
-        <img src="assets/pp-logo.webp" alt="Pure Prospects logo" width="52" height="52" />
-        <span class="brand__wordmark">PURE<span>PROSPECTS</span><small>THE FUTURE GETS NOTICED.</small></span>
-      </a>
-      <nav class="nav" id="main-nav" aria-label="Main navigation">
-        <a href="#prospects">Prospects</a>
-        <a href="#services">What We Do</a>
-        <a href="#coverage">The Wire</a>
-        <a href="#media">Media</a>
-        <a href="#about">About</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Pure Prospects home">PURE PROSPECTS</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#prospects">Prospects <span>⌄</span></a>
+        <a href="#rankings">Rankings <span>⌄</span></a>
+        <a href="#recruiting">Recruiting <span>⌄</span></a>
+        <a href="#events">Events <span>⌄</span></a>
+        <a href="#media">Media <span>⌄</span></a>
       </nav>
-      <a class="header__action" href="#contact">GET EVALUATED <span aria-hidden="true">↗</span></a>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="header-tools"><button type="button" aria-label="Search" class="icon-button">⌕</button><button type="button" aria-label="Account" class="icon-button">♙</button><button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">☰</button></div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero__noise" aria-hidden="true"></div>
-      <div class="hero__grid" aria-hidden="true"></div>
-      <div class="shell hero__content">
-        <div class="hero__copy" data-reveal>
-          <div class="eyebrow"><span class="eyebrow__line"></span> THE HOME OF THE NEXT GENERATION <span class="eyebrow__num">01 / PURE PROSPECTS</span></div>
-          <h1 id="hero-title">THE NEXT<br><em>WAVE</em> STARTS<br><span class="hero__outline">HERE.</span></h1>
-          <p class="hero__dek">The stories, the standouts, the names you need to know. Bringing emerging talent into focus through real scouting, real coverage, and real opportunity.</p>
-          <div class="hero__buttons">
-            <a class="btn btn--blue" href="#prospects">EXPLORE PROSPECTS <span class="btn__arrow">↗</span></a>
-            <a class="btn btn--ghost" href="#services">WHAT WE DO <span class="btn__arrow">→</span></a>
-          </div>
-          <div class="hero__bottom"><div class="hero__avatars"><img src="assets/player-jayden.webp" alt=""/><img src="assets/player-ean.webp" alt=""/><img src="assets/player-gavin.webp" alt=""/></div><span>BUILT FOR THE ATHLETES<br><strong>BEHIND THE HIGHLIGHTS.</strong></span></div>
-        </div>
-        <div class="hero__visual" data-reveal>
-          <div class="hero__halo" aria-hidden="true"></div>
-          <span class="hero__visual-label">ON OUR RADAR <b>✦</b></span>
-          <div class="hero__poster poster--back"><img src="assets/spotlight-ean.webp" alt="Pure Prospects scouting graphic for Ean Hayes" loading="eager" /></div>
-          <div class="hero__poster poster--front"><img src="assets/spotlight-jayden.webp" alt="Pure Prospects scouting graphic for Jayden Varpness" loading="eager" /></div>
-          <div class="hero__floating"><span class="hero__floating-top">SCOUTING REPORT</span><strong>2028</strong><span>CLASS WATCHLIST <span class="small-blue">● LIVE</span></span></div>
-          <div class="hero__bluebar" aria-hidden="true">PURE PROSPECTS / 00—01</div>
-        </div>
+    <section class="profile-hero shell" id="top" aria-labelledby="player-name">
+      <div class="player-photo"><img src="assets/player-ean.webp" alt="Ean Hayes basketball prospect portrait" /></div>
+      <div class="player-heading">
+        <div class="overline">FEATURED PROSPECT <span>•</span> 2028 CLASS</div>
+        <h1 id="player-name">Ean Hayes</h1>
+        <div class="player-facts"><div><strong>2028</strong><span>CLASS</span></div><div><strong>CG</strong><span>POSITION</span></div><div><strong>6-4</strong><span>HEIGHT</span></div></div>
+        <div class="school-facts"><div><span>HIGH SCHOOL</span><strong>Wise Central High School</strong></div><div><span>CLUB TEAM</span><strong>Pure Prospects</strong></div></div>
       </div>
-      <div class="hero__side-word" aria-hidden="true">DISCOVER THE DIFFERENCE</div>
-      <div class="hero__scroll"><span>SCROLL TO EXPLORE</span><span class="hero__scroll-line"></span></div>
+      <aside class="rating-card" aria-label="Pure Prospects rating">
+        <h2>PURE PROSPECTS<br />RATING</h2><div class="rating-score">—</div><div class="rating-breakdown"><div><span>NATL.</span><strong>—</strong></div><div><span>CG</span><strong>—</strong></div><div><span>STATE</span><strong>—</strong></div></div>
+      </aside>
     </section>
 
-    <section class="marquee" aria-label="Pure Prospects coverage categories">
-      <div class="marquee__track" aria-hidden="true">
-        <span>RECRUITING INTEL</span><b>✦</b><span>ATHLETE EXPOSURE</span><b>✦</b><span>PLAYER EVALUATIONS</span><b>✦</b><span>RANKINGS & NEWS</span><b>✦</b><span>THE NEXT WAVE</span><b>✦</b>
-        <span>RECRUITING INTEL</span><b>✦</b><span>ATHLETE EXPOSURE</span><b>✦</b><span>PLAYER EVALUATIONS</span><b>✦</b><span>RANKINGS & NEWS</span><b>✦</b><span>THE NEXT WAVE</span><b>✦</b>
+    <nav class="profile-tabs shell" aria-label="Player profile sections" role="tablist"><button class="tab is-active" role="tab" aria-selected="true" data-tab="profile">Player Profile</button><button class="tab" role="tab" aria-selected="false" data-tab="recruiting">Recruiting</button><button class="tab" role="tab" aria-selected="false" data-tab="stats">Stats</button><button class="tab" role="tab" aria-selected="false" data-tab="videos">Videos</button><button class="tab" role="tab" aria-selected="false" data-tab="social">Social</button></nav>
+
+    <section class="shell tab-panel is-active" id="panel-profile" data-panel="profile" role="tabpanel">
+      <div class="content-grid">
+        <article class="info-card"><h2>PLAYER INFO</h2><dl><div><dt>Class</dt><dd>2028</dd></div><div><dt>Position</dt><dd>Combo Guard</dd></div><div><dt>Height</dt><dd>6-4</dd></div><div><dt>High School</dt><dd>Wise Central High School</dd></div><div><dt>Club Team</dt><dd>Pure Prospects</dd></div></dl></article>
+        <div class="stacked-cards"><article class="info-card stats-card"><h2>2025-26 STATS</h2><div class="stat-row"><div><strong>20.7</strong><span>PPG</span></div><div><strong>5.1</strong><span>RPG</span></div><div><strong>3.6</strong><span>APG</span></div><div><strong>37%</strong><span>3P%</span></div></div></article><article class="info-card"><h2>RECRUITING</h2><dl><div><dt>Pure Prospects Rating</dt><dd>—</dd></div><div><dt>National</dt><dd>—</dd></div><div><dt>Position (CG)</dt><dd>—</dd></div><div><dt>State</dt><dd>—</dd></div></dl></article></div>
       </div>
     </section>
+    <section class="shell tab-panel" id="panel-recruiting" data-panel="recruiting" role="tabpanel"><div class="empty-panel"><span>RECRUITING PROFILE</span><h2>THE NEXT<br />OPPORTUNITY.</h2><p>Recruiting information and verified interest will appear here as this prospect's journey develops.</p><a class="blue-link" href="#contact">Submit an update ↗</a></div></section>
+    <section class="shell tab-panel" id="panel-stats" data-panel="stats" role="tabpanel"><div class="empty-panel"><span>SEASON STATS</span><h2>NUMBERS<br />THAT SPEAK.</h2><p>Expanded game-by-game statistics are coming soon.</p></div></section>
+    <section class="shell tab-panel" id="panel-videos" data-panel="videos" role="tabpanel"><div class="empty-panel"><span>VIDEO LIBRARY</span><h2>SEE THE<br />GAME.</h2><p>Highlights and scouting video will be added as coverage is published.</p></div></section>
+    <section class="shell tab-panel" id="panel-social" data-panel="social" role="tabpanel"><div class="empty-panel"><span>SOCIAL COVERAGE</span><h2>FOLLOW THE<br />JOURNEY.</h2><p>Follow Pure Prospects for player updates and recruiting coverage.</p><a class="blue-link" href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener">Follow on Instagram ↗</a></div></section>
 
-    <section class="credibility" aria-label="Pure Prospects reach">
-      <div class="shell credibility__grid">
-        <div class="credibility__intro"><span class="tag-kicker">BUILT ON REAL CONNECTIONS</span><h2>MORE THAN<br>JUST HIGHLIGHTS.</h2></div>
-        <div class="stat"><span class="stat__figure">1,500<span>+</span></span><p>Coaches in the<br>promoted network</p></div>
-        <div class="stat"><span class="stat__figure">5M<span>+</span></span><p>Platform views<br>reported by the brand</p></div>
-        <div class="stat stat--final"><span class="stat__figure">KY<span>→</span>USA</span><p>Kentucky roots.<br><small>Broader recruiting coverage</small></p></div>
-      </div>
-      <div class="shell"><p class="proof-note">*Reach and network figures are from Pure Prospects’ supplied promotional materials. Verify all figures and geographic claims before publishing a live site.</p></div>
-    </section>
-
-    <section class="section prospects-section" id="prospects" aria-labelledby="prospects-title">
-      <div class="shell">
-        <div class="section-heading" data-reveal>
-          <div><div class="section-kicker"><span>01</span> / THE WATCHLIST</div><h2 id="prospects-title">TALENT WORTH<br><em>WATCHING.</em></h2><p>They're putting in the work. We're putting eyes on it. Meet some of the names making noise.</p></div>
-          <div class="section-heading__right"><span class="section-heading__asterisk">✳</span><div class="filter-tabs" role="group" aria-label="Filter prospects by class"><button class="filter is-active" type="button" data-year="all" aria-pressed="true">ALL</button><button class="filter" type="button" data-year="2028" aria-pressed="false">2028</button><button class="filter" type="button" data-year="2027" aria-pressed="false">2027</button></div></div>
-        </div>
-        <div class="prospect-grid" id="prospect-grid">
-          <article class="prospect-card" data-year="2028" data-athlete="jayden" data-reveal>
-            <div class="prospect-card__image"><img src="assets/player-jayden.webp" alt="Jayden Varpness Pure Prospects graphic" loading="lazy"/><span class="prospect-card__index">PP / 001</span></div>
-            <div class="prospect-card__info"><div class="prospect-card__tags"><span>CLASS OF 2028</span><span>SHOOTING GUARD</span></div><h3>JAYDEN<br>VARPNESS</h3><div class="prospect-card__meta"><span>6'4" · DONELSON CHRISTIAN ACADEMY</span><button type="button" class="round-arrow" data-open-athlete="jayden" aria-label="View Jayden Varpness details">↗</button></div></div>
-          </article>
-          <article class="prospect-card" data-year="2028" data-athlete="ean" data-reveal>
-            <div class="prospect-card__image"><img src="assets/player-ean.webp" alt="Ean Hayes Pure Prospects graphic" loading="lazy"/><span class="prospect-card__index">PP / 002</span></div>
-            <div class="prospect-card__info"><div class="prospect-card__tags"><span>CLASS OF 2028</span><span>COMBO GUARD</span></div><h3>EAN<br>HAYES</h3><div class="prospect-card__meta"><span>6'4" · WISE CENTRAL HIGH SCHOOL</span><button type="button" class="round-arrow" data-open-athlete="ean" aria-label="View Ean Hayes details">↗</button></div></div>
-          </article>
-          <article class="prospect-card" data-year="2027" data-athlete="gavin" data-reveal>
-            <div class="prospect-card__image"><img src="assets/player-gavin.webp" alt="Gavin Groves Pure Prospects graphic" loading="lazy"/><span class="prospect-card__index">PP / 003</span></div>
-            <div class="prospect-card__info"><div class="prospect-card__tags"><span>CLASS OF 2027</span><span>SHOOTING GUARD</span></div><h3>GAVIN<br>GROVES</h3><div class="prospect-card__meta"><span>6'4" · MUHLENBERG COUNTY</span><button type="button" class="round-arrow" data-open-athlete="gavin" aria-label="View Gavin Groves details">↗</button></div></div>
-          </article>
-        </div>
-        <div class="prospects-section__bottom"><span>01—03 / FEATURED ATHLETES</span><a class="text-link" href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer">SEE MORE PROSPECT SPOTLIGHTS <span>↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="manifesto" id="about" aria-labelledby="manifesto-title">
-      <div class="shell manifesto__layout">
-        <div class="manifesto__side" data-reveal><div class="section-kicker"><span>02</span> / OUR MISSION</div><span class="manifesto__star">✳</span><p>AN EYE FOR TALENT.<br>A PLATFORM FOR POSSIBILITY.</p></div>
-        <div class="manifesto__main" data-reveal><h2 id="manifesto-title">EVERY PLAYER<br>HAS A <span>STORY.</span><br>WE MAKE SURE<br>IT GETS <em>SEEN.</em></h2><div class="manifesto__bottom"><p>Greatness starts long before the spotlight. From the first evaluation to the next major opportunity, Pure Prospects puts the work, the growth, and the potential of emerging athletes front and center.</p><a class="circle-link" href="#services" aria-label="Explore our services">↗</a></div></div>
-      </div>
-      <div class="manifesto__watermark" aria-hidden="true">PURE</div>
-    </section>
-
-    <section class="section services-section" id="services" aria-labelledby="services-title">
-      <div class="shell">
-        <div class="section-heading section-heading--services" data-reveal><div><div class="section-kicker"><span>03</span> / WHAT WE DO</div><h2 id="services-title">MORE THAN A<br><em>NAME ON A LIST.</em></h2></div><p>Built to give athletes exposure and the people following them a clearer picture of what comes next.</p></div>
-        <div class="service-grid">
-          <article class="service-card service-card--blue" data-reveal><span class="service-card__number">01 / EVALUATE</span><span class="service-card__icon" aria-hidden="true">◎</span><div class="service-card__content"><h3>PLAYER PROFILES<br>& EVALUATIONS</h3><p>Individual prospect breakdowns with athlete information, performance highlights, and shareable coverage.</p><a href="#contact">REQUEST AN EVALUATION <span>↗</span></a></div><div class="service-card__giant" aria-hidden="true">01</div></article>
-          <article class="service-card" data-reveal><span class="service-card__number">02 / DISCOVER</span><span class="service-card__icon" aria-hidden="true">↗</span><div class="service-card__content"><h3>RECRUITING<br>ASSISTANCE</h3><p>Insight, exposure, and a clearer path for families navigating the recruiting process.</p><a href="#contact">LET'S TALK RECRUITING <span>↗</span></a></div><div class="service-card__giant" aria-hidden="true">02</div></article>
-          <article class="service-card" data-reveal><span class="service-card__number">03 / REPORT</span><span class="service-card__icon" aria-hidden="true">▧</span><div class="service-card__content"><h3>SCOUTING,<br>RANKINGS & INTEL</h3><p>On-the-ground coverage of emerging talent, recruiting movement, rankings and news that matters.</p><a href="#coverage">READ THE LATEST <span>↗</span></a></div><div class="service-card__giant" aria-hidden="true">03</div></article>
-        </div>
-        <div class="evaluation-banner" data-reveal><div class="evaluation-banner__badge">PLAYER PROFILE<br><strong>+ EVALUATION</strong></div><div class="evaluation-banner__copy"><span>READY FOR THE NEXT STEP?</span><h3>PUT YOUR GAME<br><em>ON THE RADAR.</em></h3><p>Request a shareable player profile and evaluation. Advertised starting offer: <strong>$50</strong>.</p></div><a class="btn btn--white" href="#contact">GET STARTED <span class="btn__arrow">↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="section coverage-section" id="coverage" aria-labelledby="coverage-title">
-      <div class="shell">
-        <div class="section-heading section-heading--coverage" data-reveal><div><div class="section-kicker"><span>04</span> / THE WIRE</div><h2 id="coverage-title">ALL SIGNAL.<br><em>NO NOISE.</em></h2><p>Prospects, commitments, the headlines and the moments moving the game forward.</p></div><a class="text-link" href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer">FOLLOW ALL COVERAGE <span>↗</span></a></div>
-        <div class="news-grid">
-          <a class="news-card news-card--large" href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer" data-reveal><img src="assets/news-committed.webp" alt="Pure Prospects graphic announcing Demarcus Henry commitment" loading="lazy"/><div class="news-card__scrim"></div><span class="news-card__category">RECRUITING / COMMITMENTS</span><div class="news-card__title"><h3>THE NEXT CHAPTER:<br>DEMARCUS HENRY<br>COMMITS TO UNC.</h3><div class="news-card__bottom"><span>THE WIRE · BASKETBALL</span><span class="news-card__arrow">↗</span></div></div></a>
-          <a class="news-card" href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer" data-reveal><img src="assets/news-newdigs.webp" alt="Pure Prospects New Digs recruiting graphic" loading="lazy"/><div class="news-card__scrim"></div><span class="news-card__category">PLAYER MOVEMENT</span><div class="news-card__title"><h3>NEW DIGS.<br>NEW OPPORTUNITY.</h3><div class="news-card__bottom"><span>RECRUITING UPDATE</span><span class="news-card__arrow">↗</span></div></div></a>
-          <a class="news-card" href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer" data-reveal><img src="assets/news-camp.webp" alt="Pure Prospects Elite Camp All Stars post" loading="lazy"/><div class="news-card__scrim"></div><span class="news-card__category">ON THE CIRCUIT</span><div class="news-card__title"><h3>ELITE CAMP.<br>REAL STANDOUTS.</h3><div class="news-card__bottom"><span>CAMP COVERAGE</span><span class="news-card__arrow">↗</span></div></div></a>
-        </div>
-        <div class="coverage-strip" data-reveal><div><span class="live-dot"></span><strong>THE STORY DOESN'T STOP HERE.</strong><span>REPORTING FROM THE COURT TO YOUR FEED.</span></div><a href="https://pureprospects.substack.com/" target="_blank" rel="noopener noreferrer">READ THE REPORT <span>↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="section media-section" id="media" aria-labelledby="media-title">
-      <div class="shell media-grid">
-        <div class="media-visual" data-reveal><div class="media-visual__pic"><img src="assets/podcast.webp" alt="Pure Prospects podcast promotional graphic" loading="lazy" /></div><div class="media-visual__corner">PP <span>↗</span></div><div class="media-visual__text">BEYOND<br>THE GAME<span>™</span></div><div class="media-visual__frame"></div></div>
-        <div class="media-copy" data-reveal><div class="section-kicker"><span>05</span> / THE CONVERSATION</div><div class="media-copy__badge">ON AIR <span class="live-dot"></span></div><h2 id="media-title">MORE THAN<br>JUST <em>THE<br>BOX SCORE.</em></h2><p>Real conversations with the people shaping the game. Coaches, athletes, recruiting perspectives, and stories you won't find on a stat sheet.</p><div class="media-links"><a href="https://www.youtube.com/@pure.prospects" target="_blank" rel="noopener noreferrer">WATCH ON YOUTUBE <span>↗</span></a><a href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer">MORE ON INSTAGRAM <span>↗</span></a></div></div>
-      </div>
-    </section>
-
-    <section class="section faq-section" aria-labelledby="faq-title">
-      <div class="shell faq-layout"><div data-reveal><div class="section-kicker"><span>06</span> / GOOD TO KNOW</div><h2 id="faq-title">GOT<br><em>QUESTIONS?</em></h2><p>Here's where to start. Reach out for anything specific to your athlete or program.</p></div><div class="faq-list" data-reveal>
-        <details><summary>WHAT IS A PLAYER PROFILE & EVALUATION? <span class="faq-plus">+</span></summary><p>A shareable write-up and player overview based on information, film or scouting supplied for review. Contact Pure Prospects to discuss the current process, turnaround time, and what's included.</p></details>
-        <details><summary>IS PURE PROSPECTS ONLY FOR BASKETBALL? <span class="faq-plus">+</span></summary><p>Basketball scouting and recruiting are central to the platform, and its recent coverage also includes football news and athlete stories. Ask about coverage for your sport.</p></details>
-        <details><summary>HOW DO WE GET OUR ATHLETE FEATURED? <span class="faq-plus">+</span></summary><p>Use the contact form below or email Pure Prospects with the athlete's name, graduation class, school, position, contact details, and relevant links. Features are subject to the team's review.</p></details>
-        <details><summary>CAN COLLEGE COACHES CONNECT WITH THE PLATFORM? <span class="faq-plus">+</span></summary><p>Yes, coaches and scouts can reach out using the contact information below to discuss player coverage, evaluations, and potential connections.</p></details>
-      </div></div>
-    </section>
-
-    <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-section__grid" aria-hidden="true"></div>
-      <div class="shell contact-layout"><div class="contact-copy" data-reveal><div class="section-kicker section-kicker--light"><span>07</span> / LET'S CONNECT</div><h2 id="contact-title">YOUR NEXT<br><span>CHAPTER</span><br>STARTS HERE.</h2><p>Have an athlete we should know about? Want to discuss evaluations, recruiting help, or media coverage? Start the conversation.</p><div class="contact-email"><span>REACH US DIRECTLY</span><a href="mailto:ppkyscouts@gmail.com">PPKYSCOUTS@GMAIL.COM ↗</a></div></div>
-      <form class="contact-form" id="contact-form" data-reveal><div class="form-head"><span>NEW INQUIRY / PURE PROSPECTS</span><span>↗</span></div><h3>TELL US ABOUT<br>YOUR PROSPECT.</h3><div class="input-row"><label>YOUR NAME <input required name="name" autocomplete="name" placeholder="Full name" /></label><label>EMAIL ADDRESS <input required type="email" name="email" autocomplete="email" placeholder="you@example.com" /></label></div><div class="input-row"><label>WHAT CAN WE HELP WITH? <select required name="interest"><option value="" disabled selected>Select an option</option><option>Player profile & evaluation</option><option>Recruiting assistance</option><option>Scouting / media coverage</option><option>Partnership / general inquiry</option></select></label><label>ATHLETE'S CLASS (OPTIONAL) <input name="class" placeholder="e.g., 2028" /></label></div><label>MESSAGE <textarea required name="message" rows="3" placeholder="Tell us a little about your athlete or inquiry..."></textarea></label><button class="btn btn--dark" type="submit">OPEN EMAIL TO SEND <span class="btn__arrow">↗</span></button><p class="form-note" id="form-note" aria-live="polite">This demo opens your email app with a prepared message. No information is stored on this website.</p></form>
-      </div>
-    </section>
+    <section class="directory-section" id="prospects"><div class="shell"><div class="section-head"><div><span class="section-label">THE DIRECTORY</span><h2>PROSPECTS<br /><em>TO WATCH.</em></h2></div><div class="filters" role="group" aria-label="Filter by class"><button class="filter is-active" data-year="all" aria-pressed="true">ALL</button><button class="filter" data-year="2028" aria-pressed="false">2028</button><button class="filter" data-year="2027" aria-pressed="false">2027</button></div></div><div class="prospect-grid"><article class="prospect-card" data-year="2028"><img src="assets/player-jayden.webp" alt="Jayden Varpness prospect graphic" /><div><span>CLASS OF 2028 · SG</span><h3>Jayden Varpness</h3><p>Donelson Christian Academy · 6-4</p></div></article><article class="prospect-card" data-year="2028"><img src="assets/player-ean.webp" alt="Ean Hayes prospect graphic" /><div><span>CLASS OF 2028 · CG</span><h3>Ean Hayes</h3><p>Wise Central High School · 6-4</p></div></article><article class="prospect-card" data-year="2027"><img src="assets/player-gavin.webp" alt="Gavin Groves prospect graphic" /><div><span>CLASS OF 2027 · SG</span><h3>Gavin Groves</h3><p>Muhlenberg County · 6-4</p></div></article></div></div></section>
+    <section class="contact-strip" id="contact"><div class="shell contact-inner"><div><span class="section-label">PLAYER EVALUATIONS</span><h2>PUT YOUR GAME<br /><em>ON THE RADAR.</em></h2></div><a class="primary-button" href="mailto:ppkyscouts@gmail.com">GET IN TOUCH <span>↗</span></a></div></section>
   </main>
-
-  <footer class="site-footer"><div class="shell"><div class="footer-top"><a class="footer-brand" href="#top"><img src="assets/pp-logo.webp" alt="Pure Prospects logo"/><span>PURE<br>PROSPECTS<span class="footer-brand__period">.</span></span></a><p>THE NEXT WAVE ISN'T COMING.<br><strong>IT'S ALREADY HERE.</strong></p><div class="footer-social"><a href="https://www.instagram.com/pure_prospects/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a href="https://www.youtube.com/@pure.prospects" target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a><a href="https://pureprospects.substack.com/" target="_blank" rel="noopener noreferrer">SUBSTACK ↗</a></div></div><div class="footer-bottom"><span>© <span id="current-year">2026</span> PURE PROSPECTS. CONCEPT HOMEPAGE.</span><span>DESIGNED AS A CLIENT MOCKUP · CONTENT AND METRICS SUBJECT TO CLIENT APPROVAL</span><a href="#top">BACK TO TOP ↑</a></div></div></footer>
-
-  <dialog class="athlete-modal" id="athlete-modal" aria-labelledby="modal-name"><button class="athlete-modal__close" id="modal-close" type="button" aria-label="Close player profile">✕</button><div class="athlete-modal__image"><img id="modal-photo" src="assets/player-jayden.webp" alt="" /></div><div class="athlete-modal__content"><div class="section-kicker"><span>PROSPECT PROFILE</span> / PURE PROSPECTS</div><h2 id="modal-name">PLAYER NAME</h2><p id="modal-subtitle"></p><div class="athlete-modal__stats" id="modal-stats"></div><p class="athlete-modal__note">Athlete details are based on the supplied Pure Prospects social graphics and should be confirmed before publishing.</p><a class="btn btn--blue" id="modal-inquiry" href="#contact">INQUIRE ABOUT THIS ATHLETE <span class="btn__arrow">↗</span></a></div></dialog>
+  <footer><div class="shell"><strong>PURE PROSPECTS</strong><span>Recruiting. Scouting. Rankings. Media.</span><span>© <span id="current-year"></span> Pure Prospects</span></div></footer>
 </body>
 </html>
