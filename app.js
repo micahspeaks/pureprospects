@@ -12,20 +12,43 @@
   });
   qa('.main-nav a').forEach(link => link.addEventListener('click', () => nav.classList.remove('is-open')));
 
+  const searchToggle = q('#search-toggle');
+  const searchBar = q('#search-bar');
+  const searchInput = q('#site-search');
+  searchToggle?.addEventListener('click', () => {
+    const isHidden = searchBar.hidden;
+    searchBar.hidden = !isHidden;
+    searchToggle.setAttribute('aria-expanded', String(isHidden));
+    if (isHidden) searchInput?.focus();
+  });
+  searchInput?.addEventListener('input', event => {
+    const term = event.target.value.toLowerCase().trim();
+    qa('.story-card,.interview-card,.spotlight-card,.latest-list a').forEach(item => {
+      item.hidden = Boolean(term) && !item.textContent.toLowerCase().includes(term);
+    });
+  });
+
   const tabs = qa('.tab');
-  const panels = qa('[data-panel]');
+  const panels = qa('[data-profile-panel]');
   tabs.forEach(tab => tab.addEventListener('click', () => {
     const target = tab.dataset.tab;
-    tabs.forEach(item => { const active = item === tab; item.classList.toggle('is-active', active); item.setAttribute('aria-selected', String(active)); });
-    panels.forEach(panel => panel.classList.toggle('is-active', panel.dataset.panel === target));
+    tabs.forEach(item => { const active = item === tab; item.classList.toggle('active', active); item.setAttribute('aria-selected', String(active)); });
+    panels.forEach(panel => panel.classList.toggle('active', panel.dataset.profilePanel === target));
   }));
 
-  const filters = qa('.filter');
-  const cards = qa('.prospect-card');
-  filters.forEach(filter => filter.addEventListener('click', () => {
-    filters.forEach(item => { const active = item === filter; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', String(active)); });
-    cards.forEach(card => { card.hidden = filter.dataset.year !== 'all' && card.dataset.year !== filter.dataset.year; });
+  const rankFilters = qa('.rank-filter');
+  rankFilters.forEach(filter => filter.addEventListener('click', () => {
+    rankFilters.forEach(item => item.classList.toggle('active', item === filter));
   }));
+
+  qa('img').forEach(image => {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'media-placeholder';
+    placeholder.setAttribute('role', 'img');
+    placeholder.setAttribute('aria-label', `${image.alt || 'Image'} placeholder`);
+    placeholder.innerHTML = '<span>IMAGE PLACEHOLDER</span><b>Visual asset coming soon</b>';
+    image.replaceWith(placeholder);
+  });
 
   q('#current-year').textContent = String(new Date().getFullYear());
 })();
